@@ -150,6 +150,19 @@ body {
 	height: auto;
 }
 
+// Variable Names
+
+@favgreen: #70ACB1;
+@textcolor: #59606d;
+
+
+// Mixin
+
+.phoneview {
+	max-width: 500;
+}
+
+
 //Nav Header //
 * {
 	margin: 0;
@@ -173,7 +186,12 @@ body {
 	background: #70ACB1;
 	border-bottom: 5px solid #59606d;
 	width: 100%;
+
+	@media screen {
+		.phoneview;
+	}
 }
+
 
 
 .logo {
@@ -211,6 +229,12 @@ body {
 	li a:hover {
 		color: #fff;
 	}
+
+	@media screen {
+		.phoneview;
+		display: flex;
+	}
+
 }
 
 .containerone {
@@ -230,7 +254,7 @@ body {
 	}
 
 	.aboutme {
-		background: #70ACB1;
+		background: @favgreen;
 		// border: 1px solid yellow;
 		padding: 5%;
 		border-radius: 15px;
@@ -249,96 +273,102 @@ body {
 			margin-bottom: 15px;
 			font-size: 1.5rem;
 		}
+
+		@media  {
+			.phoneview;
+		}
+
+
 	}
-}
 
-.row {
-	// border: 1px solid orangered;
-	margin-top: 25px;
-	background: #70ACB1;
-	width: auto;
-	padding: 45px;
-	border-radius: 15px;
-	margin-left: 10px;
-	margin-right: 10px;
-
-	h3 {
-		font-size: 2rem;
-		margin-bottom: 10px;
-	}
-}
-
-// Middle Section
-
-.box {
-	margin: 0 auto;
-	width: 85%;
-	// border: 1px solid green;
-
-	h3 {
-		font-size: 2rem;
-		text-align: center;
-		margin-top: 45px;
-		margin-bottom: 45px;
-		background: #70ACB1;
+	.row {
+		// border: 1px solid orangered;
+		margin-top: 25px;
+		background: @favgreen;
+		;
+		width: auto;
+		padding: 45px;
 		border-radius: 15px;
+		margin-left: 10px;
+		margin-right: 10px;
+
+		h3 {
+			font-size: 2rem;
+			margin-bottom: 10px;
+		}
+	}
+
+	// Middle Section
+
+	.box {
+		margin: 0 auto;
+		width: 85%;
+		// border: 1px solid green;
+
+		h3 {
+			font-size: 2rem;
+			text-align: center;
+			margin-top: 45px;
+			margin-bottom: 45px;
+			background: @favgreen;
+			border-radius: 15px;
+			padding: 5%;
+			color: white;
+		}
+
+		h4 {
+			font-size: 2rem;
+			margin-bottom: 45px;
+			background: @favgreen;
+			padding: 10px;
+			border-radius: 15px;
+			color: white;
+		}
+	}
+
+	.table-wrapper {
+		margin: 0 auto;
+
+		table {
+			border-collapse: collapse;
+			width: 100%;
+			color: #59606d;
+			// border: 1px solid red;
+		}
+
+		th {
+			font-size: 2rem;
+			background: @favgreen;
+			border-radius: 15px;
+
+		}
+
+		th,
+		td {
+			text-align: left;
+			padding: 8px;
+		}
+
+		tr:nth-child(even) {
+			background-color: #f2f2f2;
+		}
+
+	}
+
+	footer {
+		background: #70ACB1;
 		padding: 5%;
-		color: white;
+
+		h2 {
+			font-size: 3rem;
+			color: white;
+			text-align: center;
+
+		}
+
+		email {
+			font-size: 2rem;
+			color: white;
+			text-align: center;
+		}
 	}
-
-	h4 {
-		font-size: 2rem;
-		margin-bottom: 45px;
-		background: #70ACB1;
-		padding: 10px;
-		border-radius: 15px;
-		color: white;
-	}
-}
-
-.table-wrapper {
-	margin: 0 auto;
-
-	table {
-		border-collapse: collapse;
-		width: 100%;
-		color: #59606d;
-		// border: 1px solid red;
-	}
-
-	th {
-		font-size: 2rem;
-		background: #70ACB1;
-		border-radius: 15px;
-		
-	}
-
-	th,
-	td {
-		text-align: left;
-		padding: 8px;
-	}
-
-	tr:nth-child(even) {
-		background-color: #f2f2f2;
-	}
-
-}
-
-footer {
-	background: #70ACB1;
-	padding: 5%;
-
-	h2 {
-		font-size: 3rem;
-		color: white;
-		text-align: center;
-		
-	}
-
-	email {
-		font-size: 2rem;
-		color: white;
-		text-align: center;
-	}
-}

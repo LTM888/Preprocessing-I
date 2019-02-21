@@ -138,6 +138,9 @@ body {
   width: 100%;
   height: auto;
 }
+.phoneview {
+  max-width: 500;
+}
 * {
   margin: 0;
   padding: 0;
@@ -156,6 +159,11 @@ body {
   background: #70ACB1;
   border-bottom: 5px solid #59606d;
   width: 100%;
+}
+@media screen {
+  .navbar {
+    max-width: 500;
+  }
 }
 .logo {
   width: 85px;
@@ -184,6 +192,12 @@ body {
 }
 .menu li a:hover {
   color: #fff;
+}
+@media screen {
+  .menu {
+    max-width: 500;
+    display: flex;
+  }
 }
 .containerone {
   width: 95%;
